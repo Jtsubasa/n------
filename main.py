@@ -69,6 +69,7 @@ class CountUpTimer:
         self.timers_running = False
         self.timer_values = [0, 0, 0]
         self.update_timer_labels()
+        self.start_button.config(state=tk.NORMAL)
 
     def update_timers(self):
         if self.timers_running:
