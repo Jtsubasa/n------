@@ -6,6 +6,7 @@ class CountUpTimer:
         self.window = tk.Tk()
         self.window.title("n進数タイマー")
         self.window.config(padx=20, pady=20, bg="#87cefa")
+        self.window.geometry("1000x400+0+0")
 
         self.bases = [10, 10, 10]  # 3つのタイマーの進数
         self.timers_running = False  # 開始、停止を区別するフラグ
@@ -102,6 +103,7 @@ class CountUpTimer:
         settings_window = tk.Toplevel(self.window)
         settings_window.title("設定")
         settings_window.config(bg="#87cefa")
+        settings_window.geometry("450x300+0+400")
 
         settings_window.protocol("WM_DELETE_WINDOW", lambda: self.close_settings_window(settings_window))
 
